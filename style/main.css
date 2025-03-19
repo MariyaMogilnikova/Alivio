@@ -62,6 +62,7 @@ p {
 .navbar-flex__item a {
     text-decoration: none;
     margin-right: 14px;
+    font-size: 20px;
     color: #292929;
 }
 .header {
@@ -244,6 +245,80 @@ p {
 }
 .footer ul li:last-child {
     margin-bottom: 0px;
+}
+/* подобрать размеры */
+
+@media screen and (max-width: 1440px) {
+    .navbar-flex {
+        flex-wrap: wrap;
+    }
+    .navbar-flex .btn {
+    margin-right: 10px;
+    }
+    .service-flex{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .service-flex__item:first-child {
+        margin-bottom: 5px;
+        margin-right: 25px;
+    }
+    .service-grid {
+        max-width: 450px;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+    .service-grid__item:nth-child(2){
+        padding-top: 50px;
+    }
+    .service-grid__item:nth-child(3){
+        padding-top: 50px;
+        margin-bottom: 70px;
+    }
+    .story {
+        padding: 70px 0;
+    }
+    .story-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+    .story-flex__item:first-child {
+        margin-bottom: 50px;
+    }
+    .product-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .product-flex__item:first-child {
+        margin-bottom: 50px;
+        margin-right: 35px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .navbar-flex {
+        justify-content: space-evenly;
+    }
+    .service-flex__item h6 {
+        padding-top: 70px;
+    }
+    .product {
+        padding: 70px 0;
+    }
+    .product-flex__item:first-child {
+        margin-bottom: 100px;
+    }    
+}
+
+@media screen and (max-width: 760px) {
+    .header{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 540px) {
+
 }
 
 
