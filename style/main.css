@@ -96,8 +96,8 @@ p {
     cursor: pointer;
 }
 
-.service {
-}
+/* .service {
+} */
 .service-flex {
     display: flex;
     justify-content: space-between;
@@ -327,9 +327,13 @@ p {
 }
 /* Adaptive for Sansung A51 */
 @media screen and (max-width: 412px) {
+    .navbar-flex__item ul {
+        padding-left: 10px;
+    }
+
     .navbar-flex__item ul li a {
-        margin-right: 5px;
-        font-size: 18px;
+        /* margin-right: 5px; */
+        font-size: 18px;        
     }
     .navbar {
         padding: 0;
