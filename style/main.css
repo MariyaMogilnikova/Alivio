@@ -161,8 +161,8 @@ p {
 }
 .story-flex__item__video {
     position: relative;
-    max-width: 895px;
-    max-height: 516px;
+    width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
     z-index: 0;
@@ -179,6 +179,10 @@ p {
     transform: translateX(-50%) translateY(-50%);
     z-index: 1;
     cursor: pointer;
+}
+.story-flex__item__video img{
+    max-width: 100%;
+    height: auto; 
 }
 
 .product {
@@ -292,8 +296,7 @@ p {
         justify-content: center;
     }
     .product-flex__item:first-child {
-        margin-bottom: 50px;
-        margin-right: 35px;
+        margin: 0 auto 50px;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -311,14 +314,38 @@ p {
     }    
 }
 
-@media screen and (max-width: 760px) {
-    .header{
-        width: 100%;
-        height: 100%;
-    }
-}
 @media screen and (max-width: 540px) {
-
+    .navbar-flex__item ul li {
+        margin-right: 10px;  
+    }
+    .product-flex__item__img2 {
+        width: 250px;
+        height: 245px;
+        left: -15px;
+        bottom: -60px;
+    }    
+}
+/* Adaptive for Sansung A51 */
+@media screen and (max-width: 412px) {
+    .navbar-flex__item ul li a {
+        margin-right: 5px;
+        font-size: 18px;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .navbar .container {
+        padding: 0;
+    }
+    .navbar-flex__item a {
+        font-size: 18px;
+    }
+    .btn {
+        font-size: 18px;
+        width: 210px;
+        height: 55px;
+    }
+    
 }
 
 
