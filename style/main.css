@@ -329,7 +329,7 @@ p {
     }    
 }
 /* Adaptive for Sansung A51 */
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 412px) {
     .navbar-flex__item ul li a {
         /* margin-right: 5px; */
         font-size: 18px;        
