@@ -28,9 +28,29 @@
           <a href="">Sign in</a>
           <button class="btn">Start Trial</button>
         </div>
+          <!-- Burger icon -->
+          <div class="burger navbar-burger">
+            <span></span>
+          </div>
       </div>
     </div>
   </section>
+
+  <div class="wrapper">
+    <div class="sidebar">
+        <div class="sidebar__flex">
+            <img class="logo" src="img/logo.svg" alt="">
+            <button class="sidebar-burger">&times;</button>
+        </div>
+        <ul class="sidebar__items">
+          <li><a href="">Why Alivio</a></li>
+          <li><a href="">Solutions</a></li>
+          <li><a href="">Community</a></li>
+          <li><a href="">Pricing</a></li>
+        </ul>
+        <button class="btn sidebar__button">Let's Talk</button>
+    </div>
+  </div>
   
   <!-- Шапка сайта -->
   <header class="header">
@@ -102,8 +122,8 @@
     <div class="container">
       <div class="product-flex">
         <div class="product-flex__item">
-          <img src="/img/girl.png" alt="Image of a Girl" class="product-flex__item__img1">
-          <img src="/img/Card.svg" alt="Card of a Girl" class="product-flex__item__img2">
+          <img src="img/girl.png" alt="Image of a Girl" class="product-flex__item__img1">
+          <img src="img/Card.svg" alt="Card of a Girl" class="product-flex__item__img2">
         </div>
         <div class="product-flex__item">
           <h6>Our product</h6>
@@ -129,6 +149,19 @@
       </ul>
     </div>
   </footer>
+
+  <script>
+    document.querySelector('.navbar-burger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.sidebar').classList.toggle('open');
+    });
+
+    // Обработчик для сайдбара
+    document.querySelector('.sidebar-burger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.sidebar').classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>

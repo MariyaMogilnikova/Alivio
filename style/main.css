@@ -65,6 +65,58 @@ p {
     font-size: 20px;
     color: #292929;
 }
+.open {
+    display: flex !important;
+}
+.wrapper {
+    flex-grow: 1;
+}
+.sidebar {
+    display: none;
+}
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+.burger span{
+    height: 2px;
+    width: 100%;
+    transform: scale(1);
+    background-color: #01996D;
+}
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #01996D;
+    transition: all 0.3s ease 0s;
+}
+.burger::after {
+    width: 70%;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+/* Добавляем класс active для анимации иконки бургера */
+/* .burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+} */
 .header {
     padding-top: 175px;
     min-height: 895px;
@@ -300,9 +352,56 @@ p {
     }
 }
 @media screen and (max-width: 1024px) {
-    .navbar-flex {
-        justify-content: space-evenly;
+
+    /* sidebar styles */
+    .navbar-flex__item ul,
+    .navbar-flex__item button,
+    .navbar-flex__item a {
+        display: none;
+    } 
+    .burger { 
+        display: flex; 
     }
+    .sidebar {
+        flex-direction: column;
+        position: fixed;
+        height: auto;
+        width: 50%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: white;
+        box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.65);
+        /* animation: burgerAnimation 0.4s; */
+    }
+    .sidebar__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sidebar-burger {
+        border: none;
+        background-color: var(--color-white);
+        color: #01996D;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    .sidebar ul{
+        flex-direction: column;
+        /* row-gap: 30px; */
+    }
+    .sidebar ul li {
+        list-style: none;
+    }
+    .sidebar ul li a {
+        color: black;
+        font-size: 22px;
+        text-decoration: none;
+        font-weight: 500;
+        line-height: 60px;
+    }
+    /* end of sidebar styles */
     .service-flex__item h6 {
         padding-top: 70px;
     }
