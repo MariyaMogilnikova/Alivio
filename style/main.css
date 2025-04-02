@@ -97,9 +97,6 @@ p {
     background-color: #01996D;
     transition: all 0.3s ease 0s;
 }
-.burger::after {
-    width: 70%;
-}
 
 .burger::before { top: 0 }
 
@@ -188,6 +185,9 @@ p {
 .service-grid__item:nth-child(3){
     padding-top: 50px;
 }
+.service-grid__item__img {
+    width: 100%;
+}
 
 .story {
     background-color: #245852;
@@ -249,8 +249,8 @@ p {
 }
 .product-flex__item__img1 {
     display: block;
-    width: 100%; /* Устанавливаем ширину по желанию */
-    height: auto; /* Сохраняем пропорции */
+    width: 100%; 
+    height: auto; 
     z-index: 0;
 }
 .product-flex__item__img2 {
@@ -414,6 +414,9 @@ p {
 }
 
 @media screen and (max-width: 540px) {
+    h1 {
+        font-size: 40px;
+    }
     .navbar-flex__item ul {
         padding-left: 10px;
     }
@@ -429,28 +432,11 @@ p {
 }
 /* Adaptive for Sansung A51 */
 @media screen and (max-width: 412px) {
-    .navbar-flex__item ul li a {
-        /* margin-right: 5px; */
-        font-size: 18px;        
-    }
-    .navbar {
-        padding: 15px 0 0 0;
-    }
-    .navbar .container {
-        padding: 0;
-    }
-    .navbar-flex__item a {
-        font-size: 18px;
-    }
-    .btn {
-        font-size: 18px;
-        width: 210px;
-        height: 55px;
-    }
+
     .product-flex__item__img2 {
         width: 190px;
         height: 185px;
-        left: -8.5px;
+        left: -15px;
         bottom: -60px;
     }
     
